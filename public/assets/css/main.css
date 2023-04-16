@@ -1838,6 +1838,7 @@ section {
 .hero {
   overflow-x: hidden;
   padding: 0;
+  
 }
 
 .hero .carousel {
@@ -1846,6 +1847,7 @@ section {
   padding: 80px 0;
   margin: 0;
   position: relative;
+  
 }
 
 .hero .carousel-item {
@@ -1857,14 +1859,21 @@ section {
   overflow: hidden;
   z-index: 1;
   transition-duration: 0.4s;
+  background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
 .hero .carousel-item::before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   inset: 0;
+  background-color: rgba(0, 0, 0, 0.7) !important;
 }
+
+ .riya::before {
+  
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
 
 .hero .info {
   position: absolute;

@@ -1,7 +1,17 @@
 import React from 'react';
+import SimpleImageSlider from "react-simple-image-slider";
 
-class Header extends React.Component{
-    render(){
+const anu = [
+  { url: "assets/img/hero-carousel/hero-carousel-1.jpg" },
+  { url: "assets/img/hero-carousel/hero-carousel-2.jpg" },
+  { url: "assets/img/hero-carousel/hero-carousel-3.jpg" },
+  { url: "assets/img/hero-carousel/hero-carousel-4.jpg" },
+  { url: "assets/img/hero-carousel/hero-carousel-5.jpg" },
+];
+
+
+function Header()
+{
         return(
             <div>
               <header id="header" className="header d-flex align-items-center">
@@ -43,10 +53,37 @@ class Header extends React.Component{
             </div>
           </header>
 
-  
+
+   {/* ======= Hero Section ======= */}
+   <section id="hero" className="hero">
+            <div className="info d-flex align-items-center">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-6 text-center">
+                    <h2 data-aos="fade-down">Welcome to <span>UpConstruction</span></h2>
+                    <p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <a data-aos="fade-up" data-aos-delay={200} href="#get-started" className="btn-get-started">Get Started</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+         <SimpleImageSlider id="hero-carousel" className="carousel slide footer"
+          data-bs-ride="carousel" data-bs-interval={5000}
+    
+        width={"100%"}
+        height={904}
+        loop={true}
+        autoPlay={true}
+        images={anu}
+        showBullets={true}
+        showNavs={true}
+      /> 
+          </section>
+          {/* End Hero Section */}
             </div>
         );
-    }
 }
+    
 
 export default Header;
